@@ -45,9 +45,7 @@ function handlesub(event) {
   btns = document.querySelectorAll(".btns");
   btns.forEach(function (item) {
     item.addEventListener("click", function (event) {
-      event.target.parentElement.parentElement.classList.toggle(
-        `${item.name}task`
-      );
+      event.target.parentElement.parentElement.classList = `${item.name}task hide`;
     });
   });
 }
