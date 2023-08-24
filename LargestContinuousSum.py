@@ -17,6 +17,7 @@ def find_largest_sum(arr):
         partialSum.pop(-1)
         #add them part by part until 
     sum=0
+    #add them together until the positive sum is less than absoulute value of next number in partialsum
     tempsum=[]
     for k in partialSum:
         if k>0:
@@ -26,7 +27,8 @@ def find_largest_sum(arr):
         elif  sum<k*-1  :
             tempsum.append(sum)
             sum=0
-    return sum
+    tempsum.append(sum)
+    return max(tempsum)
             
 # Test Case 1
 arr1 = [1, 2, -1, 3, 4, -1]
